@@ -15,6 +15,7 @@ export const HeaderContainer = styled.header`
       display: flex;
       align-items: center;
       gap: 4px;
+      cursor: pointer;
 
       p {
         color: ${(props) => props.theme["red-200"]};
