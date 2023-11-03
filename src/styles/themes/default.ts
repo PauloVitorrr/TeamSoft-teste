@@ -8,4 +8,5 @@ export const defaultTheme = {
   "red-200": "#ED3237",
 
   "orange-200": "#F09035",
+  "orange-400": "#DC6E05",
 } as const;

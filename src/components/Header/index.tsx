@@ -1,7 +1,7 @@
 import { ContainerSelect, HeaderContainer, InputDelivery } from "./styles";
-import Deliverize from "../../assets/Deliverize.svg";
-import account from "../../assets/account_circle_24px.svg";
-import cart from "../../assets/shopping_cart_24px.svg";
+import Deliverize from "../../assets/imgs/Deliverize.svg";
+import account from "../../assets/imgs/account_circle_24px.svg";
+import cart from "../../assets/imgs/shopping_cart_24px.svg";
 
 export function Header() {
   return (
