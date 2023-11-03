@@ -4,6 +4,7 @@ import { api } from "../../services";
 import { Root } from "../../interfaces";
 import { SectionLeft } from "../../components/SectionLeft";
 import { MainContainer } from "./styles";
+import { SectionRight } from "../../components/SectionRight";
 
 export function Home() {
   const [data, setData] = useState<Root>([]);
@@ -20,9 +21,7 @@ export function Home() {
   return (
     <MainContainer>
       <SectionLeft data={data} />
-      <section>
-        <p>Olá vetorea</p>
-      </section>
+      <SectionRight data={data} />
     </MainContainer>
   );
 }

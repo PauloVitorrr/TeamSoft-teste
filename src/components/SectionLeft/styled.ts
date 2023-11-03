@@ -4,7 +4,7 @@ export const SectionLeftContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 597px;
+  max-width: 439px;
 
   img {
     width: 100%;
