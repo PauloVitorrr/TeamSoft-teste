@@ -7,6 +7,10 @@ export const SectionRightContainer = styled.section`
   border: 1px solid ${(props) => props.theme["gray-400"]};
   border-radius: 8px;
   padding: 32px;
+
+  @media screen and (max-width: 445px) {
+    border: none;
+  }
 `;
 
 export const ContainerIngredients = styled.div`

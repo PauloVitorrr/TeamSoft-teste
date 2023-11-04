@@ -13,6 +13,9 @@ export const SectionLeftContainer = styled.section`
     color: ${(props) => props.theme["gray-500"]};
     padding: 30px 0;
     font-size: 28px;
+    @media screen and (max-width: 445px) {
+      padding: 16px;
+    }
   }
   p {
     width: 100%;
@@ -21,6 +24,10 @@ export const SectionLeftContainer = styled.section`
     font-weight: 400;
     padding-bottom: 8px;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 445px) {
+      padding: 16px;
+    }
   }
 `;
 
@@ -29,6 +36,9 @@ export const SpanPriceLeft = styled.span`
   font-size: 32px;
   font-weight: 400;
   margin-right: 17px;
+  @media screen and (max-width: 445px) {
+    padding: 16px;
+  }
 `;
 
 export const SpanPriceRight = styled.span`

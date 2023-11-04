@@ -7,6 +7,10 @@ export const HeaderContainer = styled.header`
   padding: 16px 40px;
   background-color: ${(props) => props.theme["gray-100"]};
 
+  @media screen and (max-width: 1110px) {
+    justify-content: center;
+  }
+
   nav {
     display: flex;
     gap: 24px;
@@ -16,12 +20,18 @@ export const HeaderContainer = styled.header`
       align-items: center;
       gap: 4px;
       cursor: pointer;
+      @media screen and (max-width: 1110px) {
+        display: none;
+      }
 
       p {
         color: ${(props) => props.theme["red-200"]};
         font-family: Roboto;
         font-weight: 400;
         font-size: 12px;
+        @media screen and (max-width: 1110px) {
+          display: none;
+        }
       }
     }
   }
@@ -52,4 +62,7 @@ export const InputDelivery = styled.input`
   padding: 16px 16px;
   border: 1px solid ${(props) => props.theme["red-200"]};
   border-radius: 4px;
+  @media screen and (max-width: 1110px) {
+    display: none;
+  }
 `;
