@@ -67,3 +67,49 @@ export const ContainerButtonAdd = styled.div`
     background-color: ${(props) => props.theme["white"]};
   }
 `;
+
+export const ContainerTalher = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 375px;
+  background-color: rgba(253, 215, 14, 0.2);
+  padding: 8px 16px;
+  margin-top: 9px;
+
+  h5 {
+    font-size: 14px;
+    color: ${(props) => props.theme["gray-500"]};
+  }
+`;
+
+export const ContainerAddTalher = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px;
+    border: 1px solid ${(props) => props.theme["orange-200"]};
+    border-radius: 5px;
+    width: 140px;
+    height: 40px;
+
+    button {
+      border: none;
+      background-color: ${(props) => props.theme["white"]};
+    }
+  }
+
+  button {
+    color: ${(props) => props.theme["white"]};
+    background-color: ${(props) => props.theme["orange-200"]};
+    border-radius: 4px;
+    border: none;
+    width: 219px;
+    height: 40px;
+  }
+`;

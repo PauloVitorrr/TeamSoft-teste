@@ -4,8 +4,10 @@ import negativo from "../../assets/imgs/negativo.svg";
 import add from "../../assets/imgs/Add.svg";
 
 import {
+  ContainerAddTalher,
   ContainerButtonAdd,
   ContainerIngredients,
+  ContainerTalher,
   IngredientsPrice,
   SectionRightContainer,
 } from "./styles";
@@ -26,9 +28,9 @@ export function SectionRight({ data }: DataProps) {
 
       {data[0]?.ingredients?.map((group) => {
         if (group.group === "Ingredientes Extras") {
-          return group.itens.map((item) => (
-            <IngredientsPrice>
-              <div key={item.id}>
+          return group.itens.map((item, index) => (
+            <IngredientsPrice key={index}>
+              <div>
                 <h5>{item.nm_item}</h5>
                 <span>R${item.vl_item}</span>
               </div>
@@ -45,6 +47,21 @@ export function SectionRight({ data }: DataProps) {
           ));
         }
       })}
+      <ContainerTalher>
+        <h5>Precisa de talher?</h5>
+      </ContainerTalher>
+      <ContainerAddTalher>
+        <div>
+          <button>
+            <img src={negativo} />
+          </button>
+          <p>1</p>
+          <button>
+            <img src={add} />
+          </button>
+        </div>
+        <button>Adicionar</button>
+      </ContainerAddTalher>
     </SectionRightContainer>
   );
 }
