@@ -10,6 +10,7 @@ export const SectionRightContainer = styled.section`
 
   @media screen and (max-width: 445px) {
     border: none;
+    padding: 16px;
   }
 `;
 
@@ -17,7 +18,7 @@ export const ContainerIngredients = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
-  width: 375px;
+  width: 100%;
   background-color: rgba(253, 215, 14, 0.2);
   padding: 8px 16px;
 
@@ -74,9 +75,9 @@ export const ContainerButtonAdd = styled.div`
 
 export const ContainerTalher = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   gap: 4px;
-  width: 375px;
+  width: 100%;
   background-color: rgba(253, 215, 14, 0.2);
   padding: 8px 16px;
   margin-top: 9px;
@@ -87,10 +88,24 @@ export const ContainerTalher = styled.div`
   }
 `;
 
+export const ContentOptionTalher = styled.div`
+  display: flex;
+  gap: 8px;
+
+  & > span {
+    font-size: 14px;
+    color: ${(props) => props.theme["gray-500"]};
+  }
+`;
+
 export const ContainerAddTalher = styled.div`
   display: flex;
   gap: 16px;
   margin-top: 12px;
+
+  @media screen and (max-width: 445px) {
+    margin-top: 48px;
+  }
 
   div {
     display: flex;
@@ -104,7 +119,7 @@ export const ContainerAddTalher = styled.div`
 
     button {
       border: none;
-      background-color: ${(props) => props.theme["white"]};
+      background-color: transparent;
     }
   }
 
@@ -115,5 +130,9 @@ export const ContainerAddTalher = styled.div`
     border: none;
     width: 219px;
     height: 40px;
+
+    @media screen and (max-width: 445px) {
+      width: 195px;
+    }
   }
 `;

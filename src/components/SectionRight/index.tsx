@@ -3,14 +3,7 @@ import { Root } from "../../interfaces";
 import negativo from "../../assets/imgs/negativo.svg";
 import add from "../../assets/imgs/Add.svg";
 
-import {
-  ContainerAddTalher,
-  ContainerButtonAdd,
-  ContainerIngredients,
-  ContainerTalher,
-  IngredientsPrice,
-  SectionRightContainer,
-} from "./styles";
+import * as S from "./styles";
 
 interface DataProps {
   data: Root;
@@ -20,21 +13,21 @@ export function SectionRight({ data }: DataProps) {
   console.log(data);
 
   return (
-    <SectionRightContainer>
-      <ContainerIngredients>
+    <S.SectionRightContainer>
+      <S.ContainerIngredients>
         <h4>Adicionar Ingredientes</h4>
         <span>Até 8 ingredientes.</span>
-      </ContainerIngredients>
+      </S.ContainerIngredients>
 
       {data[0]?.ingredients?.map((group) => {
         if (group.group === "Ingredientes Extras") {
           return group.itens.map((item, index) => (
-            <IngredientsPrice key={index}>
+            <S.IngredientsPrice key={index}>
               <div>
                 <h5>{item.nm_item}</h5>
                 <span>R${item.vl_item}</span>
               </div>
-              <ContainerButtonAdd>
+              <S.ContainerButtonAdd>
                 <button>
                   <img src={negativo} />
                 </button>
@@ -42,15 +35,23 @@ export function SectionRight({ data }: DataProps) {
                 <button>
                   <img src={add} />
                 </button>
-              </ContainerButtonAdd>
-            </IngredientsPrice>
+              </S.ContainerButtonAdd>
+            </S.IngredientsPrice>
           ));
         }
       })}
-      <ContainerTalher>
+      <S.ContainerTalher>
         <h5>Precisa de talher?</h5>
-      </ContainerTalher>
-      <ContainerAddTalher>
+        <S.ContentOptionTalher>
+          <input type="radio" />
+          <span>sim</span>
+        </S.ContentOptionTalher>
+        <S.ContentOptionTalher>
+          <input type="radio" />
+          <span>não</span>
+        </S.ContentOptionTalher>
+      </S.ContainerTalher>
+      <S.ContainerAddTalher>
         <div>
           <button>
             <img src={negativo} />
@@ -61,7 +62,7 @@ export function SectionRight({ data }: DataProps) {
           </button>
         </div>
         <button>Adicionar</button>
-      </ContainerAddTalher>
-    </SectionRightContainer>
+      </S.ContainerAddTalher>
+    </S.SectionRightContainer>
   );
 }

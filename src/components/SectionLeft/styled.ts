@@ -9,11 +9,13 @@ export const SectionLeftContainer = styled.section`
   img {
     width: 100%;
   }
+
   h2 {
     color: ${(props) => props.theme["gray-500"]};
     padding: 30px 0;
     font-size: 28px;
     @media screen and (max-width: 445px) {
+      font-size: 18px;
       padding: 16px;
     }
   }
@@ -26,6 +28,7 @@ export const SectionLeftContainer = styled.section`
     margin-bottom: 10px;
 
     @media screen and (max-width: 445px) {
+      font-size: 16px;
       padding: 16px;
     }
   }
@@ -37,6 +40,7 @@ export const SpanPriceLeft = styled.span`
   font-weight: 400;
   margin-right: 17px;
   @media screen and (max-width: 445px) {
+    font-size: 14px;
     padding: 16px;
   }
 `;
@@ -45,4 +49,7 @@ export const SpanPriceRight = styled.span`
   color: ${(props) => props.theme["gray-500"]};
   font-size: 32px;
   text-decoration: line-through;
+  @media screen and (max-width: 445px) {
+    font-size: 14px;
+  }
 `;
